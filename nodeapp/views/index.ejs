@@ -3,26 +3,64 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<style>
+  /* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+  /* Header/Logo Title */
+.header {
+  padding:0.1vw;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 20px;
+}
+.button {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+</style>
 <body>
+  <div class="header">
+    <h1>COVID TRACKER</h1>
+    <p>Check how far the virus has spread.</p>
+  </div>
 <!--====form section start====-->
 <div class="user-detail">
+  <center>
     <h2>Insert data for Covid19 :</h2>
     <form action="/users/create" method="POST">
           <label>State Name</label>
           <input type="text" name="state_name" required><br>
           <label>Date</label>
-          <input type="text" name="datea" required>
+          <input type="text" name="datea" required><br>
           <label>Samples</label>
-          <input type="text" name="samples" required>
+          <input type="text" name="samples" required><br>
           <label>Deaths</label>
-          <input type="text" name="deaths" required>
+          <input type="text" name="deaths" required><br>
           <label>Positives</label>
-          <input type="text" name="positives" required>
+          <input type="text" name="positives" required><br>
           <label>Negatives</label>
-          <input type="text" name="negative" required>
+          <input type="text" name="negative" required><br>
           <label>Discharge</label>
-          <input type="text" name="discharge" required>
-          <button type="submit">Submit</button>
+          <input type="text" name="discharge" required><br>
+          <br>
+          <button class="button">Submit</button>
+    </center>
         </div>
 </div>
 <!--====form section start====-->
