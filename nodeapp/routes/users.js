@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db=require('../connection');
 router.get('/display', function(req, res) {
-  db.query('SELECT * FROM Covid_details', function (err, result) {
+  db.query('SELECT * FROM Covid_details1', function (err, result) {
     if (err) throw err;
       console.log({data:result})
     ///res.render() function
@@ -16,7 +16,7 @@ router.post('/create', function(req, res, next) {
   const userDetails=req.body;
  
   // insert user data into users table
-  var sql = 'INSERT INTO Covid_details SET ?';
+  var sql = 'INSERT INTO Covid_details1 SET ?';
   db.query(sql, userDetails,function (err, data) { 
       if (err) throw err;
          console.log("Data is inserted successfully "); 
